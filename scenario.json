@@ -1,0 +1,14 @@
+{
+  "constructorArgs": ["2024-01-01T00:30Z",64,70],
+  "calls": [
+    {"method":"advance","args":["2024-01-01T00:30Z",3]},
+    {"method":"advance","args":["2024-01-01T00:30Z",3],"error":"Stale cursor or invalid batch size"}
+  ],
+  "views": [
+    {"method":"state","args":[],"expected":{"mode":"HOLD","cursor":"2024-01-01T02:00Z"}},
+    {"method":"checkpoint","args":["2024-01-01T00:30Z"],"expected":{"actual":64,"mode":"ALLOW"}},
+    {"method":"checkpoint","args":["2024-01-01T01:00Z"],"expected":{"actual":62,"mode":"ALLOW"}},
+    {"method":"checkpoint","args":["2024-01-01T01:30Z"],"expected":{"actual":71,"mode":"HOLD"}},
+    {"method":"checkpoint","args":["2024-01-01T02:00Z"],"expected":null}
+  ]
+}

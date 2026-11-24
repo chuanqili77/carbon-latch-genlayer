@@ -1,0 +1,85 @@
+{
+  "chainId": 61999,
+  "sourceSha256": "415f79d57d35a043bec4122ab95b771250a512fd738bdb4cb4599430a6c2d51b",
+  "events": [
+    {
+      "method": "advance",
+      "args": [
+        "2024-01-01T00:30Z",
+        3
+      ],
+      "hash": "0x644bfa59ee774704a3fee113a452e3fabd17a7b93c44d5e465ecac723b88c03b",
+      "status": "FINALIZED",
+      "execution": "SUCCESS",
+      "result": "2024-01-01T02:00Z",
+      "destination": "0x70Be1D36361c6edf8Ee8A4051c35F5ae196c61b4"
+    },
+    {
+      "method": "advance",
+      "args": [
+        "2024-01-01T00:30Z",
+        3
+      ],
+      "hash": "0x3d0d143aa4228254a09114ea9201a3848ca7e193cff77cfec4dd6339febb571b",
+      "status": "FINALIZED",
+      "execution": "ERROR",
+      "result": "Stale cursor or invalid batch size",
+      "destination": "0x70Be1D36361c6edf8Ee8A4051c35F5ae196c61b4"
+    }
+  ],
+  "deployment": {
+    "hash": "0x5c663b37abb7b5cd31375deb3f80cd9446e23277d84a903f70a8ac3bd472b8e7",
+    "status": "FINALIZED",
+    "execution": "SUCCESS",
+    "result": null,
+    "destination": "0x70Be1D36361c6edf8Ee8A4051c35F5ae196c61b4"
+  },
+  "address": "0x70Be1D36361c6edf8Ee8A4051c35F5ae196c61b4",
+  "readbacks": [
+    {
+      "method": "state",
+      "args": [],
+      "state": {
+        "cursor": "2024-01-01T02:00Z",
+        "mode": "HOLD"
+      }
+    },
+    {
+      "method": "checkpoint",
+      "args": [
+        "2024-01-01T00:30Z"
+      ],
+      "state": {
+        "actual": 64,
+        "mode": "ALLOW"
+      }
+    },
+    {
+      "method": "checkpoint",
+      "args": [
+        "2024-01-01T01:00Z"
+      ],
+      "state": {
+        "actual": 62,
+        "mode": "ALLOW"
+      }
+    },
+    {
+      "method": "checkpoint",
+      "args": [
+        "2024-01-01T01:30Z"
+      ],
+      "state": {
+        "actual": 71,
+        "mode": "HOLD"
+      }
+    },
+    {
+      "method": "checkpoint",
+      "args": [
+        "2024-01-01T02:00Z"
+      ],
+      "state": null
+    }
+  ]
+}
